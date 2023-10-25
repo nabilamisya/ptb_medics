@@ -2,17 +2,879 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homepage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
+<TextView
+    android:id="@+id/Heading1"
+    android:layout_width="205dp"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/interextrabold"
+    android:textSize="22sp"
+    android:text="@string/temukan_lay"
+    android:textAppearance="@string/temukan_lay"
+    android:layout_marginTop="50dp"
+    android:layout_marginStart="25dp"
+    android:gravity="top"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+</TextView>
+
+    <Button
+        android:id="@+id/notification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:drawableLeft="@drawable/notification"
+        android:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="25dp"
+        android:contentDescription="Click this button to open notification">
+    </Button>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/search_bar"
+        android:layout_width="355dp"
+        android:layout_height="38dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="25dp"
+        tools:context=".MainActivity">
+
+        <TextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/searchingbar"
+            android:layout_width="355dp"
+            android:layout_height="38dp"
+            android:drawableLeft="@drawable/search"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingLeft="10dp"
+            android:background="@drawable/shape_searchbar1">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cari_dokter"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#ADADAD"
+            android:textAppearance="@style/cari_dokter">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dokterumum"
+        android:layout_width="60dp"
+        android:layout_height="85dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="180dp"
+        android:layout_marginStart="25dp">
+
+        <RelativeLayout
+            android:id="@+id/umum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shapecategory"
+            android:layout_alignParentTop="true">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/doctor"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12.5dp">
+            </Button>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="17dp"
+            android:text="@string/umum"
+            android:textColor="#A1A8B0"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="65dp"
+            >
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/doktergigi"
+        android:layout_width="60dp"
+        android:layout_height="85dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="180dp"
+        android:layout_marginStart="100dp">
+
+        <RelativeLayout
+            android:id="@+id/dentist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shapecategory"
+            android:layout_alignParentTop="true">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/dentist"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12.5dp">
+            </Button>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="17dp"
+            android:text="@string/gigi"
+            android:textColor="#A1A8B0"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="65dp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/dokternutrisi"
+        android:layout_width="60dp"
+        android:layout_height="85dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="180dp"
+        android:layout_marginStart="175dp">
+
+        <RelativeLayout
+            android:id="@+id/nutrition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shapecategory"
+            android:layout_alignParentTop="true">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/nutrisi"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12.5dp">
+            </Button>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="17dp"
+            android:text="@string/nutrisi"
+            android:textColor="#A1A8B0"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="65dp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/dokterkardiologi"
+        android:layout_width="60dp"
+        android:layout_height="85dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="180dp"
+        android:layout_marginStart="250dp">
+
+        <RelativeLayout
+            android:id="@+id/cardiologist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shapecategory"
+            android:layout_alignParentTop="true">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/cardiologist"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12.5dp">
+            </Button>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="17dp"
+            android:text="@string/kardiologi"
+            android:textColor="#A1A8B0"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="65dp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/dokterimunologi"
+        android:layout_width="60dp"
+        android:layout_height="85dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="180dp"
+        android:layout_marginStart="325dp">
+
+        <RelativeLayout
+            android:id="@+id/imunology"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shapecategory"
+            android:layout_alignParentTop="true">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/imun"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12.5dp">
+            </Button>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="17dp"
+            android:text="@string/imunologi"
+            android:textColor="#A1A8B0"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="65dp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="355dp"
+        android:layout_height="29dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="300dp"
+        android:layout_marginStart="25dp">
+
+        <TextView
+            android:id="@+id/heading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dokter_terb"
+            android:textAppearance="@style/dokter_terb"
+            android:fontFamily="@font/interbold"
+            android:layout_marginTop="3dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/lihatsemua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lihat_semua"
+            android:textSize="12sp"
+            android:layout_marginStart="288dp"
+            android:layout_marginTop="7dp"
+            android:textColor="#199A8E">
+        </TextView>
+    </RelativeLayout>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dokterterb1"
+    android:layout_width="130dp"
+    android:layout_height="190dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginTop="340dp"
+    android:layout_marginStart="25dp"
+    android:background="@drawable/shape_dokterterb"
+    android:elevation="2dp">
+
+    <ImageView
+        android:id="@+id/avatar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/avatar1_background">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/namadok1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dr_irwan_gu"
+        android:textAppearance="@style/namadokterb"
+        android:fontFamily="@font/interbold"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="10dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/rumahsakit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rumah_sakit"
+        android:textAppearance="@style/rumah_sakit"
+        android:layout_marginTop="110dp"
+        android:layout_marginStart="10dp">
+    </TextView>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/docrating"
+        android:layout_width="77dp"
+        android:layout_height="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="125dp">
+
+      <RelativeLayout
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/katdokterb"
+          android:layout_width="41dp"
+          android:layout_height="15dp"
+          android:background="@drawable/shapekategoridokter">
+          
+          <TextView
+              android:id="@+id/katdokterbgigi"
+              android:layout_width="31dp"
+              android:layout_height="8dp"
+              android:text="@string/dokter_gigi"
+              android:textAppearance="@style/dokter_gigi"
+              android:layout_marginTop="3dp"
+              android:layout_marginStart="5.5dp">
+          </TextView>
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rating1"
+            android:layout_width="26dp"
+            android:layout_height="14dp"
+            android:background="@drawable/shaperating"
+            android:layout_marginStart="45dp">
+            
+            <TextView
+                android:layout_width="26dp"
+                android:layout_height="10dp"
+                android:text="@string/some_id"
+                android:textAppearance="@style/some_id"
+                android:layout_marginTop="2.2dp"
+                android:drawableLeft="@drawable/star">
+            </TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="155dp">
+    <Button
+        android:layout_width="105dp"
+        android:layout_height="23dp"
+        android:background="@drawable/psndokterb"
+        android:backgroundTint="#199A8E"
+        android:contentDescription="Click this button to pesan dokter terbaik1">
+    </Button>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pesan_jadwa"
+            android:textAppearance="@style/pesan_jadwa"
+            android:lineSpacingExtra="2sp"
+            android:translationY="-0.76sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="25dp">
+        </TextView>
+    </RelativeLayout>
+</RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/dokterterb2"
+        android:layout_width="130dp"
+        android:layout_height="190dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="340dp"
+        android:layout_marginStart="170dp"
+        android:background="@drawable/shape_dokterterb"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/avatar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="28dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/avatar1_background">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/namadok2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dr_irwan_gu"
+            android:textAppearance="@style/namadokterb"
+            android:fontFamily="@font/interbold"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="10dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/rumahsakit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rumah_sakit"
+            android:textAppearance="@style/rumah_sakit"
+            android:layout_marginTop="110dp"
+            android:layout_marginStart="10dp">
+        </TextView>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/docrating2"
+            android:layout_width="77dp"
+            android:layout_height="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="125dp">
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/katdokterb2"
+                android:layout_width="41dp"
+                android:layout_height="15dp"
+                android:background="@drawable/shapekategoridokter">
+
+                <TextView
+                    android:id="@+id/katdokterbgigi2"
+                    android:layout_width="31dp"
+                    android:layout_height="8dp"
+                    android:text="@string/dokter_gigi"
+                    android:textAppearance="@style/dokter_gigi"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="5.5dp">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rating2"
+                android:layout_width="26dp"
+                android:layout_height="14dp"
+                android:background="@drawable/shaperating"
+                android:layout_marginStart="45dp">
+
+                <TextView
+                    android:layout_width="26dp"
+                    android:layout_height="10dp"
+                    android:text="@string/some_id"
+                    android:textAppearance="@style/some_id"
+                    android:layout_marginTop="2.2dp"
+                    android:drawableLeft="@drawable/star">
+                </TextView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="155dp">
+            <Button
+                android:layout_width="105dp"
+                android:layout_height="23dp"
+                android:background="@drawable/psndokterb"
+                android:backgroundTint="#199A8E"
+                android:contentDescription="Click this button to pesan dokter terbaik1">
+            </Button>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pesan_jadwa"
+                android:textAppearance="@style/pesan_jadwa"
+                android:lineSpacingExtra="2sp"
+                android:translationY="-0.76sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="24dp">
+            </TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/dokterterb3"
+        android:layout_width="130dp"
+        android:layout_height="190dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="340dp"
+        android:layout_marginStart="315dp"
+        android:background="@drawable/shape_dokterterb"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/avatar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="28dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/avatar1_background">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/namadok3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dr_irwan_gu"
+            android:textAppearance="@style/namadokterb"
+            android:fontFamily="@font/interbold"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="10dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/rumahsakit3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rumah_sakit"
+            android:textAppearance="@style/rumah_sakit"
+            android:layout_marginTop="110dp"
+            android:layout_marginStart="10dp">
+        </TextView>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/docrating3"
+            android:layout_width="77dp"
+            android:layout_height="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="125dp">
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/katdokterb3"
+                android:layout_width="41dp"
+                android:layout_height="15dp"
+                android:background="@drawable/shapekategoridokter">
+
+                <TextView
+                    android:id="@+id/katdokterbgigi3"
+                    android:layout_width="31dp"
+                    android:layout_height="8dp"
+                    android:text="@string/dokter_gigi"
+                    android:textAppearance="@style/dokter_gigi"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="5.5dp">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rating3"
+                android:layout_width="26dp"
+                android:layout_height="14dp"
+                android:background="@drawable/shaperating"
+                android:layout_marginStart="45dp">
+
+                <TextView
+                    android:layout_width="26dp"
+                    android:layout_height="10dp"
+                    android:text="@string/some_id"
+                    android:textAppearance="@style/some_id"
+                    android:layout_marginTop="2.2dp"
+                    android:drawableLeft="@drawable/star">
+                </TextView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="155dp">
+            <Button
+                android:layout_width="105dp"
+                android:layout_height="23dp"
+                android:background="@drawable/psndokterb"
+                android:backgroundTint="#199A8E"
+                android:contentDescription="Click this button to pesan dokter terbaik1">
+            </Button>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pesan_jadwa"
+                android:textAppearance="@style/pesan_jadwa"
+                android:lineSpacingExtra="2sp"
+                android:translationY="-0.76sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="24dp">
+            </TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="355dp"
+        android:layout_height="29dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="540dp"
+        android:layout_marginStart="25dp">
+
+        <TextView
+            android:id="@+id/heading3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dokter_kons"
+            android:textAppearance="@style/dokter_terb"
+            android:fontFamily="@font/interbold"
+            android:layout_marginTop="3dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/lihatsemua2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lihat_semua"
+            android:textSize="12sp"
+            android:layout_marginStart="288dp"
+            android:layout_marginTop="7dp"
+            android:textColor="#199A8E">
+        </TextView>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/dokons1"
+        android:layout_width="67dp"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="571dp">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="1.25dp"
+            android:background="@drawable/avatar2_background">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/namadokkons1"
+            android:layout_width="67dp"
+            android:layout_height="18dp"
+            android:lineSpacingExtra="2sp"
+            android:translationY="-1.23sp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/dr_marcus"
+            android:textAppearance="@style/dr_marcus"
+            android:layout_marginTop="70dp"
+            android:textSize="10sp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dokons2"
+        android:layout_width="67dp"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="105dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="571dp">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="1.25dp"
+            android:background="@drawable/avatar2_background">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/namadokkons2"
+            android:layout_width="67dp"
+            android:layout_height="18dp"
+            android:lineSpacingExtra="2sp"
+            android:translationY="-1.23sp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/dr_marcus"
+            android:textAppearance="@style/dr_marcus"
+            android:layout_marginTop="70dp"
+            android:textSize="10sp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dokons3"
+        android:layout_width="67dp"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="185dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="571dp">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="1.25dp"
+            android:background="@drawable/avatar2_background">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/namadokkons3"
+            android:layout_width="67dp"
+            android:layout_height="18dp"
+            android:lineSpacingExtra="2sp"
+            android:translationY="-1.23sp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/dr_marcus"
+            android:textAppearance="@style/dr_marcus"
+            android:layout_marginTop="70dp"
+            android:textSize="10sp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dokons4"
+        android:layout_width="67dp"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="265dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="571dp">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="1.25dp"
+            android:background="@drawable/avatar2_background">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/namadokkons4"
+            android:layout_width="67dp"
+            android:layout_height="18dp"
+            android:lineSpacingExtra="2sp"
+            android:translationY="-1.23sp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/dr_marcus"
+            android:textAppearance="@style/dr_marcus"
+            android:layout_marginTop="70dp"
+            android:textSize="10sp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dokons5"
+        android:layout_width="67dp"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="345dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="571dp">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="1.25dp"
+            android:background="@drawable/avatar2_background">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/namadokkons5"
+            android:layout_width="67dp"
+            android:layout_height="18dp"
+            android:lineSpacingExtra="2sp"
+            android:translationY="-1.23sp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/dr_marcus"
+            android:textAppearance="@style/dr_marcus"
+            android:layout_marginTop="70dp"
+            android:textSize="10sp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+        
+        <Button
+            android:id="@+id/homebutton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:drawableLeft="@drawable/home"
+            android:layout_marginStart="49.5dp"
+            android:layout_marginTop="27.5dp">
+        </Button>
+
+        <Button
+            android:id="@+id/messagebutton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:drawableLeft="@drawable/message"
+            android:layout_marginStart="140.5dp"
+            android:layout_marginTop="27.5dp">
+        </Button>
+
+        <Button
+            android:id="@+id/schedulebutton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:drawableLeft="@drawable/calendar"
+            android:layout_marginStart="240.5dp"
+            android:layout_marginTop="27.5dp">
+        </Button>
+
+        <Button
+            android:id="@+id/profilebutton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:drawableLeft="@drawable/profile"
+            android:layout_marginStart="330.5dp"
+            android:layout_marginTop="27.5dp">
+        </Button>
+
+
+    </RelativeLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
