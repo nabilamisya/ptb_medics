@@ -1,3 +1,70 @@
 <resources>
     <string name="app_name">My Application 2</string>
+
+    //home page
+    <string name="app_name">home</string>
+    <string name="temukan_lay">
+Temukan layanan perawatan terbaik
+</string>
+
+    <string name="cari_dokter">
+Cari Dokter
+</string>
+    <string name="umum">
+Umum
+</string>
+
+    <string name="gigi">
+Gigi
+</string>
+
+    <string name="nutrisi">
+Nutrisi
+</string>
+
+    <string name="kardiologi">
+Kardiologi
+</string>
+
+    <string name="imunologi">
+Imunologi
+</string>
+
+    <string name="dokter_terb">
+Dokter Terbaik
+</string>
+
+    <string name="lihat_semua">
+Lihat semua
+</string>
+
+    <string name="dr_irwan_gu">
+Dr. Irwan Gusnaidi
+</string>
+
+    <string name="rumah_sakit">
+Rumah Sakit Ibnu Sina
+</string>
+
+    <string name="dokter_gigi">
+Dokter gigi
+</string>
+
+    <string name="some_id">
+4,7
+</string>
+
+    <string name="pesan_jadwa">
+Pesan jadwal
+</string>
+
+    <string name="dokter_kons">
+Dokter Konsultasi Anda
+</string>
+
+    <string name="dr_marcus">
+Dr. Marcus
+</string>
+//sampe sini home page
+        
 </resources>
